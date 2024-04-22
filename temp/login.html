@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Documment</title>
+</head>
+<body>
+	<h1>LOGIN PAGE</h1>
+	{% if messages %}
+	<div style="width: 500px; height: 20px; background-color: blue;">
+	{% for sms in messages %}
+
+	<p style="color: red; background-color: blue; height: 50px;">{{sms}}</p>
+
+	{% endfor %}
+	</div>
+	{% endif %}
+	<form action="" method="post">
+		{% csrf_token %}
+		{{form.as_p}}
+		<button type="submit">login</button>
+	</form>
+</body>
+</html>
