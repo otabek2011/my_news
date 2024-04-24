@@ -31,7 +31,7 @@ def home(request):
 
 
  
-	return render(request, 'home.html', {'all_news' : all_news })
+	return render(request, 'index.html', {'all_news' : all_news })
 
 
 
