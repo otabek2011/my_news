@@ -120,6 +120,16 @@ def createNews(request):
 	return render(request, 'create_news.html', {'form': form})
 
 
+def detail_coment(request, id , one):
+
+	comment = Comment.objects.get(id=id)
+	comment.delete()
+
+	return redirect("delete",one)
+
+
+
+
 def createComment(request, id):
 	news = News.objects.get(id=id)
 	form = CommentForm()

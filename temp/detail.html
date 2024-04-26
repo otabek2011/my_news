@@ -23,25 +23,26 @@
 		{% endif %}	 
 	</center>
 	<hr>
-	<h3> <a href="{% url 'tahrirlash' one.id %}"> 🔎 edit</a> </h3><hr>
-	<h3> <a href="{% url 'edit_news_form' one.id %}">🔎form edit</a> </h3>
-	<h3> <a href="{% url 'ochirish' one.id %}"> 🗑delete</a> </h3>
-	
+	 <a href="{% url 'edit_news_form' one.id %}">🔎form edit</a> 
+	 <span>|</span>
+	<a href="{% url 'ochirish' one.id %}"> 🗑delete</a> 
 	<h3>Comments ✍️</h3>
 
 	
 
 	{% if one.comments.exists %}
 		{% for j in one.comments.all %}
-			<p>{{j.izoh}}</p>
-			<span>{{j.user.username}}  | {{j.created}} </span><span><a href="{% url 'tahrirlash'">🔎edit</a></span>-> tahrilash <-<span><a href="{% url 'ochirish'">delete</a>-> delete <-</span>
+				<p>{{j.izoh}}</p>
+				<span>{{j.user.username}} 
+				 | {{j.created}} </span>
+			 <a href="{% url 'ochirish'">delete</a></span>
 			<hr>
 
 
-		{% endfor %}
-	{% else %}
-	<h4>Izohlar mavjud emas!</h4>
-	{% endif %}
+			{% endfor %}
+			{% else %}
+			<h4>Izohlar mavjud emas!</h4>
+			{% endif %}
 
 
 	{% if request.user.is_authenticated %}

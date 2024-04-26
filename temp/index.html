@@ -92,34 +92,10 @@
     </div>
   </div>
 </section>
-<section data-bs-version="5.1" class="article12 cid-u92zAMNzGw" id="about-me-12-u92zAMNzGw">    
-    
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-12 col-lg-10">
-                <h3 class="mbr-section-title mbr-fonts-style mb-4 mt-0 display-2">
-                <strong>Who We Are</strong>
-                </h3>
-                
-                <p class="mbr-text mbr-fonts-style display-7">At WildWeb, we're not your average web page creators. We're the rebels of the digital world, breaking all the rules to bring you a web experience like no other.</p>
-                <p class="mbr-text mbr-fonts-style display-7">Our team of wild creatives is here to shake up the boring and mundane. Get ready to unleash your online presence with a touch of madness and a dash of chaos!</p>
-                <p class="mbr-text mbr-fonts-style display-7">Join us on this wild ride and let's redefine the internet together. Dare to be different, dare to be wild with WildWeb!</p>
-            </div>
-        </div>
-    </div>
-</section>
+
 
 <section data-bs-version="5.1" class="gallery10 cid-u92zAMNtf2" id="features-61-u92zAMNtf2">
   
-
-
-  <div class="container-fluid">
-
-      <div class="loop-container">
-        <div class="item display-1" data-linewords="Chaos Unleashed * Wild Exploration * Untamed Creativity * Rebel Design * Madness Infusion * Dare to Be Different *" data-direction="-1" data-speed="0.05">☁️ Best offers ☁️ Free delivery ☁️ Perfect design ☁️ Comfort ☁️ Support 24/7 ☁️ Vibes</div>
-
-        <div class="item display-1" data-linewords="Chaos Unleashed * Wild Exploration * Untamed Creativity * Rebel Design * Madness Infusion * Dare to Be Different *" data-direction="-1" data-speed="0.05">☁️ Best offers ☁️ Free delivery ☁️ Perfect design ☁️ Comfort ☁️ Support 24/7 ☁️ Vibes</div>
-      </div>
     
   </div>
 </section>
@@ -139,81 +115,42 @@
             </div>
         </div>
         <div class="row mbr-masonry" data-masonry="{&quot;percentPosition&quot;: true }">
-            <div class="item features-image col-12 col-md-6 col-lg-4 active">
+         
+            {% for i in all_news %}
+
+
+
+				<form method="post">
+					{% csrf_token %}
+				<input type="hidden" name="one" value="{{i.id}}">
+					<button><i class="fa-solid fa-heart">
+					{{i.likes.count}}</i></button>
+					<button><i class="fa fa-thumbs-up" aria-hidden="true"></i></button>
+				</form>
+
+           <div class="item features-image col-12 col-md-6 col-lg-4 active">
                 <div class="item-wrapper">
                     <div class="item-img mb-3">
-                        <img src="assets/images/photo-1478432780021-b8d273730d8c.jpeg" alt="Mobirise Website Builder" title="">
+                        <img src="{{i.rasm.url}}" title="" data-slide-to="4">
                     </div>
                     <div class="item-content align-left">
-                        <h5 class="item-title mbr-fonts-style display-7">April 3, 2024</h5>
+                        <h5 class="item-title mbr-fonts-style display-7">{{i.created}}</h5>
                         <h6 class="item-subtitle mbr-fonts-style display-5">
-                            <strong>The Quest for Treasure</strong>
+                        	<a href="{% url 'detail' i.id %}">
+			
+                            <strong>{{i.title}}</strong>
                         </h6>
-                        <p class="mbr-text mbr-fonts-style display-7">Join us on a thrilling hunt for hidden riches.</p>
+				</a>
+
+                        <p class="mbr-text mbr-fonts-style display-7">{{i.text}}</p>
                         
                     </div>
                 </div>
-            </div>
-            <div class="item features-image col-12 col-md-6 col-lg-4 active">
-                <div class="item-wrapper">
-                    <div class="item-img mb-3">
-                        <img src="{% static 'assets/images/photo-1581090700227-1e37b190418e.jpeg" alt="Mobirise Website Builder' %}" title="" data-slide-to="1">
-                    </div>
-                    <div class="item-content align-left">
-                        <h5 class="item-title mbr-fonts-style display-7">March 28, 2024</h5>
-                        <h6 class="item-subtitle mbr-fonts-style display-5">
-                            <strong>Lost in the Wilderness</strong>
-                        </h6>
-                        <p class="mbr-text mbr-fonts-style display-7">Surviving the unknown with courage and wit.</p>
-                        
-                    </div>
-                </div>
-            </div><div class="item features-image col-12 col-md-6 col-lg-4 active">
-                <div class="item-wrapper">
-                    <div class="item-img mb-3">
-                        <img src="{% static 'assets/images/photo-1487058792275-0ad4aaf24ca7.jpeg' %}" alt="Mobirise Website Builder" title="" data-slide-to="2">
-                    </div>
-                    <div class="item-content align-left">
-                        <h5 class="item-title mbr-fonts-style display-7">March 10, 2024</h5>
-                        <h6 class="item-subtitle mbr-fonts-style display-5">
-                            <strong>Into the Unknown</strong>
-                        </h6>
-                        <p class="mbr-text mbr-fonts-style display-7">Exploring uncharted territories with fearless explorers.</p>
-                        
-                    </div>
-                </div>
-            </div><div class="item features-image col-12 col-md-6 col-lg-4 active">
-                <div class="item-wrapper">
-                    <div class="item-img mb-3">
-                        <img src="assets/images/g0b247ab7084245dbbd5ae5576960-h_lum5oxxp.jpg" alt="Mobirise Website Builder" title="" data-slide-to="3">
-                    </div>
-                    <div class="item-content align-left">
-                        <h5 class="item-title mbr-fonts-style display-7">March 10, 2024</h5>
-                        <h6 class="item-subtitle mbr-fonts-style display-5">
-                            <strong>Into the Unknown</strong>
-                        </h6>
-                        <p class="mbr-text mbr-fonts-style display-7">Exploring uncharted territories with fearless explorers.</p>
-                        
-                    </div>
-                </div>
-            </div>
-                    
-            <div class="item features-image col-12 col-md-6 col-lg-4 active">
-                <div class="item-wrapper">
-                    <div class="item-img mb-3">
-                        <img src="{% static 'assets/images/photo-1496171367470-9ed9a91ea931.png" alt="Mobirise Website Builder '%}" title="" data-slide-to="4">
-                    </div>
-                    <div class="item-content align-left">
-                        <h5 class="item-title mbr-fonts-style display-7">March 15, 2024</h5>
-                        <h6 class="item-subtitle mbr-fonts-style display-5">
-                            <strong>Adrenaline Rush</strong>
-                        </h6>
-                        <p class="mbr-text mbr-fonts-style display-7">Heart-pounding adventures that will leave you breathless.</p>
-                        
-                    </div>
-                </div>
-            </div>       
-                    
+            </div>     
+
+            	<h1> <a href="{% url 'ochirish' i.id %}" >🗑</a></h1>
+
+                    {% endfor %}
             
         </div>
     </div>
@@ -372,7 +309,7 @@
       </div>
       <div class="col-lg-8 side-features">
         <div class="image-wrapper mb-4">
-          <img class="w-100" src="assets/images/8.jpg" alt="Mobirise Website Builder">
+          <img class="w-100" src="{% static 'assets/images/8.jpg'%}" alt="Mobirise Website Builder">
         </div>
       </div>
     </div>
@@ -395,7 +332,7 @@
       </div>
       <div class="col-lg-8 side-features">
         <div class="image-wrapper mb-4">
-          <img class="w-100" src="assets/images/8.jpg" alt="Mobirise Website Builder">
+          <img class="w-100" src="{% static 'assets/images/8.jpg' %}" alt="Mobirise Website Builder">
         </div>
       </div>
     </div>
@@ -533,4 +470,4 @@
   
   
 </body>
-</html>{% static '
+</html>
