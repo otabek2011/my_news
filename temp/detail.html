@@ -26,10 +26,19 @@
 	 <a href="{% url 'edit_news_form' one.id %}">🔎form edit</a> 
 	 <span>|</span>
 	<a href="{% url 'ochirish' one.id %}"> 🗑delete</a> 
-	<h3>Comments ✍️</h3>
-
 	
+<div class="row align-items-start">
+	<div class="col">
+		<h3>Comments</h3>
+		<form action="" method="post">
+			
+		</form>
+	</div>
 
+</div class="col">
+
+
+	<h3>Comments ✍️</h3>
 	{% if one.comments.exists %}
 		{% for j in one.comments.all %}
 				<p>{{j.izoh}}</p>
