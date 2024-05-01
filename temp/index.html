@@ -143,24 +143,16 @@
 
 
 
-			<form method="post">
-					{% csrf_token %}
-			<input type="hidden" name="one" value="{{i.id}}">
-				<button><i class="fa-solid fa-heart">
-				{{i.likes.count}}</i></button>
-				<button><i class="fa fa-thumbs-up" aria-hidden="true"></i></button>
-			</form>
-
+			
            <div class="item features-image col-12 col-md-6 col-lg-4 active">
                 <div class="item-wrapper">
                     
                     <div class="item-content align-left">
-                        <h5 class="item-title mbr-fonts-style display-7">{{i.created}}</h5>
-                        <h6 class="item-subtitle mbr-fonts-style display-5">
+                        
                         	<a href="{% url 'detail' i.id %}">
 			
-                            <strong>{{i.title}}</strong>
-                        </h6>
+                            <h4><strong>{{i.title}}</strong></h4>
+        
 				</a>
 
                         <p class="mbr-text mbr-fonts-style display-7">{{i.text}}</p>
@@ -168,8 +160,18 @@
                         {% if i.rasm %}
                         <img src="{{i.rasm.url}}" title="" data-slide-to="4">
 						{% endif %}
+						
+							<form method="post">
+					{% csrf_token %}
+			<input type="hidden" name="one" value="{{i.id}}">
+				<button><i class="fa-solid fa-heart">
+				{{i.likes.count}}</i></button>
+				<button><i class="fa fa-thumbs-up" aria-hidden="true"></i></button>
+        <h5 class="item-title mbr-fonts-style display-7">{{i.created}}</h5>
+        <h6 class="item-subtitle mbr-fonts-style display-5"> 👀 {{i.views}}</h6>
+			</form>
             	<h1> <a href="{% url 'ochirish' i.id %}" >🗑</a></h1>
-        
+  
                         
                     </div>
                 </div>
@@ -246,7 +248,7 @@
 							<strong>Instagram</strong>
 						</h4>
 						<h5 class="card-text mbr-fonts-style display-7">
-							Lorem ipsum dolor sit amet.
+							otabek_11_01_x077
 						</h5>
 					</div>
 				</div>
@@ -285,7 +287,7 @@
 							<strong>YouTube</strong>
 						</h4>
 						<h5 class="card-text mbr-fonts-style display-7">
-							Lorem ipsum dolor sit amet.
+							@messi_fan1101
 						</h5>
 					</div>
 				</div>
@@ -320,90 +322,15 @@
 	</div>
 </section>
 
-<section data-bs-version="5.1" class="image08 cid-u92AuVikfU" id="image08-0">
-  
-  
-  
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-4">
-        <div class="col-12 col-md-12">
-          <h5 class="mbr-section-title mbr-fonts-style mt-0 mb-4 display-2"><strong>Make connections</strong></h5>
-          <h6 class="mbr-section-subtitle mbr-fonts-style mt-0 mb-4 display-7">
-            In problem-solving, creative thinking, or learning, the ability to make connections leads to original solutions.</h6>
-          
-        </div>
-      </div>
-      <div class="col-lg-8 side-features">
-        <div class="image-wrapper mb-4">
-          <img class="w-100" src="{% static 'assets/images/8.jpg'%}" alt="Mobirise Website Builder">
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<section data-bs-version="5.1" class="image08 cid-u92Av7DSyN" id="image08-1">
-  
-  
-  
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-4">
-        <div class="col-12 col-md-12">
-          <h5 class="mbr-section-title mbr-fonts-style mt-0 mb-4 display-2"><strong>Make connections</strong></h5>
-          <h6 class="mbr-section-subtitle mbr-fonts-style mt-0 mb-4 display-7">
-            In problem-solving, creative thinking, or learning, the ability to make connections leads to original solutions.</h6>
-          
-        </div>
-      </div>
-      <div class="col-lg-8 side-features">
-        <div class="image-wrapper mb-4">
-          <img class="w-100" src="{% static 'assets/images/8.jpg' %}" alt="Mobirise Website Builder">
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<section data-bs-version="5.1" class="features025 cid-u92AZ1TAYt" id="features025-5">
+
   
 
   
   
 
-  <div class="container">
-    <div class="row justify-content-center align-items-center">
-      <div class="col-12">
-        <div class="card-wrapper">
-          <div class="row">
-            <div class="col-12 col-md-12 col-lg-6 image-wrapper">
-              <img class="w-100" src="assets/images/shop4.jpg" alt="Mobirise Website Builder">
-            </div>
-            <div class="col-12 col-lg col-md-12">
-              <div class="text-wrapper align-left">
-                <h5 class="mbr-section-title mbr-fonts-style mb-4 display-2">
-                  <strong>Eco-friendly shopper</strong>
-                </h5>
-                <p class="price mbr-fonts-style mb-4 display-7">
-                  $3.00<br>
-                </p>
-                <p class="mbr-text mbr-fonts-style mb-4 display-7">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                  egestas massa vel nulla gravida pulvinar. Pellentesque
-                  habitant morbi.<br>
-                </p>
-                <div class="mbr-section-btn mt-3">
-                  <a class="btn btn-lg btn-primary display-7" href="https://mobiri.se">Buy now</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+
 
 <section data-bs-version="5.1" class="pricing02 cid-u92AXZLZ9c" id="pricing02-4">
   

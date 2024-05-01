@@ -32,6 +32,7 @@ urlpatterns = [
     path('user/edit/', user_edit, name="user_edit"),
     path('edit/form/<int:id>/',form_edit,name='edit_news_form'),
     path('password/edit/', password_edit, name='password_edit'),
+    path('comment/<int:id>/<int:one>/',delete_comment, name='delete_comment'),
     path('news/create/', createNews, name='create_news'),
     path("login/", Login, name='login'),
     path('logout/', Logout, name ='Logout'),

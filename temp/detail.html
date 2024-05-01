@@ -27,31 +27,27 @@
 	 <span>|</span>
 	<a href="{% url 'ochirish' one.id %}"> 🗑delete</a> 
 	
-<div class="row align-items-start">
-	<div class="col">
-		<h3>Comments</h3>
-		<form action="" method="post">
-			
-		</form>
-	</div>
 
-</div class="col">
+
+
 
 
 	<h3>Comments ✍️</h3>
+
+	
 	{% if one.comments.exists %}
 		{% for j in one.comments.all %}
 				<p>{{j.izoh}}</p>
 				<span>{{j.user.username}} 
 				 | {{j.created}} </span>
-			 <a href="{% url 'ochirish'">delete</a></span>
+			 <a href="{% url 'delete_comment' j.id one.id %}">o'chirish</a>
 			<hr>
 
 
-			{% endfor %}
-			{% else %}
+		{% endfor %}
+	{% else %}
 			<h4>Izohlar mavjud emas!</h4>
-			{% endif %}
+	{% endif %}
 
 
 	{% if request.user.is_authenticated %}

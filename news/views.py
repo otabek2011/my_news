@@ -39,6 +39,8 @@ def home(request):
 def detail (request, id):
 	a = News.objects.get(id = id)
 	
+	a.views += 100
+	a.save()
 	form=CommentForm()
 
 	if request.POST:
@@ -120,12 +122,12 @@ def createNews(request):
 	return render(request, 'create_news.html', {'form': form})
 
 
-def detail_coment(request, id , one):
+def delete_comment(request, id , one):
 
 	comment = Comment.objects.get(id=id)
 	comment.delete()
 
-	return redirect("delete",one)
+	return redirect("detail", one)
 
 
 
