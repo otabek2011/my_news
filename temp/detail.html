@@ -16,7 +16,7 @@
 
 	<center>
 		<h1>{{one.title}}</h1>
-		<p>{{one.text}}</p>
+		<h2>{{one.text}}</h2>
 
 		{% if one.rasm %}
 			<img src="{{one.rasm.url}}" alt="rasm yoq" style="width: 500px;">
@@ -27,7 +27,6 @@
 	 <span>|</span>
 	<a href="{% url 'ochirish' one.id %}"> 🗑delete</a> 
 	
-
 
 
 

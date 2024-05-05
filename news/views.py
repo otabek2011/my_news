@@ -119,7 +119,7 @@ def createNews(request):
 			rasm = form.cleaned_data['rasm']
 				)
 			return redirect('home')
-	return render(request, 'create_news.html', {'form': form})
+	return render(request, 'login.html', {'form': form})
 
 
 def delete_comment(request, id , one):
